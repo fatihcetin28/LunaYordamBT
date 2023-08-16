@@ -9,20 +9,28 @@ def StartYordam():
     speak("Yordam BT Açılıyor.")
     time.sleep(1)
 
-    app = Application(backend='uia').start(r"C:\Program Files\FileMaker\FileMaker Pro 19\FileMaker Pro.exe")
+    app = Application(backend="uia").start(
+        r"C:\Program Files\FileMaker\FileMaker Pro 19\FileMaker Pro.exe"
+    )
 
-    app = Application(backend='uia').connect(title='FileMaker Pro', timeout=100)
+    app = Application(backend="uia").connect(title="FileMaker Pro", timeout=100)
     # app.FileMakerPro.print_control_identifiers()
 
-    yordamBT = app.FileMakerPro.child_window(title="YordamBT", control_type="ListItem").wrapper_object()
+    yordamBT = app.FileMakerPro.child_window(
+        title="YordamBT", control_type="ListItem"
+    ).wrapper_object()
     yordamBT.double_click_input()
     # app.FileMakerPro.print_control_identifiers()
 
     time.sleep(2)
-    passInput = app.FileMakerPro.child_window(auto_id="passwordBox", control_type="Edit").wrapper_object()
+    passInput = app.FileMakerPro.child_window(
+        auto_id="passwordBox", control_type="Edit"
+    ).wrapper_object()
     passInput.type_keys("akyazimyo")
     time.sleep(0.5)
-    signInButton = app.FileMakerPro.child_window(title="Sign in", auto_id="IDSIGNIN", control_type="Button").wrapper_object()
+    signInButton = app.FileMakerPro.child_window(
+        title="Sign in", auto_id="IDSIGNIN", control_type="Button"
+    ).wrapper_object()
     signInButton.click()
     time.sleep(0.5)
 
