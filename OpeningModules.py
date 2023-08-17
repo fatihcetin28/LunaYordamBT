@@ -2,6 +2,11 @@ from pywinauto.application import Application
 import pyautogui
 import time
 import pygetwindow
+import pythoncom
+
+
+def __init__(self):
+    pythoncom.CoInitializeEx(pythoncom.COINIT_APARTMENTTHREADED)
 
 
 def StartFileMaker():
