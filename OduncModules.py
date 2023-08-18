@@ -7,10 +7,6 @@ import pyautogui
 from time import sleep
 from handleOduncUyari import handleUyariOdunc
 
-JF.StopSpeech()
-
-sleep(3)
-
 
 def TCNoAl():
     JF.Speak("Lütfen TC Kimlik No Girdikten sonra devam etmek için entera basınız.")
@@ -29,11 +25,17 @@ def OduncVerImageClick():
 def TcNoYaz(tcNo):
     pyautogui.typewrite(str(tcNo)) #tc no giriyoruz
     pyautogui.press('enter')
-    sleep(0.5)
+    sleep(1)
     handleUyariOdunc()
 
 def DemirbasNoYaz(demirbasNo):
     pyautogui.typewrite(str(demirbasNo)) #demirbaş no
     pyautogui.press('enter')
-    sleep(0.5)
+    sleep(1)
     handleUyariOdunc()
+
+def OduncSucces():
+    JF.Speak("Ödünç verme işlemi başarılı")
+
+def ClickVazgecButton():
+    ClickImage(r'C:\Users\SUBU\Documents\Codebas\YordamYardimBT\ButtonImages\vazgecButton.PNG',"Vazgec")
