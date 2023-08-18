@@ -1,7 +1,7 @@
 from pywinauto.application import Application
 import time
 import pygetwindow
-from uyeoduncislemacma import uyeoduncpencereac
+from Archive.uyeoduncislemacma import uyeoduncpencereac
 from reallyspeak import speak
 
 
