@@ -9,7 +9,7 @@ from handleOduncUyari import handleUyariOdunc
 
 
 def TCNoAl():
-    JF.Speak("Lütfen TC Kimlik No Girdikten sonra devam etmek için entera basınız.")
+    JF.Speak("Lütfen TC Kimlik No Girdikten sonra devam etmek için entera, çıkış için ESC'ye basınız.")
     tcNo = userInput("Lütfen TC Kimlik No Girdikten sonra devam etmek için entera, çıkış için ESC'ye basınız.","Lütfen TC Kimlik No Giriniz." ) 
     return tcNo
 

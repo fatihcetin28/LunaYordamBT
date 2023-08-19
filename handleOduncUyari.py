@@ -2,7 +2,7 @@ from reallyspeak import speak
 import pyautogui
 import time
 from imageToText import toText
-from pygetwindowMaximize import minimize_window
+from window_max_min import minimize_window
 from os import remove
 
 
@@ -45,4 +45,5 @@ def handleUyariOdunc():
 
         exit()
     else:
+        speak('Uyari Yok TC Numarası ve demirbaş numaralar geçerli görünüyor.')
         print('uyari yok')

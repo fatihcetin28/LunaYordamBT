@@ -1,5 +1,5 @@
-from pygetwindowMaximize import maximize_window
-from pygetwindowMaximize import minimize_window
+from window_max_min import maximize_window
+from window_max_min import minimize_window
 import pyautogui, time
 from reallyspeak import speak
 from inputbox import userInput

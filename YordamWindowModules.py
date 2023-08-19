@@ -1,5 +1,5 @@
-from pygetwindowMaximize import maximize_window
-from pygetwindowMaximize import minimize_window
+from window_max_min import maximize_window
+from window_max_min import minimize_window
 
 window_title = 'YordamBT s.19.2 - Sakarya Uygulamalı Bilimler Üniversitesi - KTP338'
 

@@ -32,7 +32,7 @@ class ButtonImages:
         pass
 
     def is_image_exist_on_window(self):
-        if self.locate_center is not None:
+        if self.locate_center() is not None:
             return True
         else:
             return False

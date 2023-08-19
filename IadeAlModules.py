@@ -10,7 +10,7 @@ from handleOduncUyari import handleUyariOdunc
 
 def DemirbasNoAl():
     JF.Speak("Lütfen Demirbaş Seri No Girdikten sonra ödünç işlemi için entera, çıkış için ESC'ye basınız.")
-    demirbasNo = userInput("Lütfen Demirbaş Seri No Girdikten sonra ödünç işlemi için entera, , çıkış için ESC'ye basınız.","Lütfen Demirbaş Seri No Giriniz." )
+    demirbasNo = userInput("Lütfen Demirbaş Seri No Girdikten sonra iade alma işlemi için entera, çıkış için ESC'ye basınız.","Lütfen Demirbaş Seri No Giriniz." )
     return demirbasNo
 
 def ClickIadeAlButton():
@@ -26,4 +26,4 @@ def ClickVazgecButton():
     IMGClick.ClickImage(r'C:\Users\SUBU\Documents\Codebas\YordamYardimBT\ButtonImages\vazgecButton.PNG',"Vazgec")
 
 def IadeSuccess():
-    JF.Speak("İade verme işlemi başarılı.")
+    JF.Speak("İade alma işlemi başarılı.")
