@@ -17,7 +17,7 @@ class ButtonImages:
         #  locate the position of image
 
     def click(self):
-        if self.is_image_exist_on_window:
+        if self.is_image_exist_on_window():
             pyautogui.click(self.file_path)
             JF.Speak(f"{self.description} düğmesi tıklandı.")
         else:
