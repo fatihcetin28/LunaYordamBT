@@ -3,8 +3,8 @@ import pyautogui
 import JAWSFSAPI as JF
 from imageToText import toText
 
-class ButtonImages:
-    def __init__(self, file_path, description):
+class ImageManager:
+    def __init__(self, file_path="", description=""):
         self.file_path = file_path
         self.description = description
 

@@ -1,12 +1,9 @@
-from ButtonImages import ButtonImages
-import ImageFilaPaths
+from WindowManager import Window
 
-img1 = ButtonImages(r"C:\Users\faikkamil\Documents\totextdemo.png", "Oppie")
+w = Window("Defteri")
 
-# print(img1.description)
-# print(img1.file_path)
+a = w.is_window_exist_by_title()
+print(a)
 
-# print(img1.to_text())
-
-print(img1.is_image_exist_on_window())
-print(img1.locate_center())
+print(w.is_window_maximized())
+print(w.is_window_minimized())
