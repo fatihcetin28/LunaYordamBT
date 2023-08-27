@@ -1,4 +1,5 @@
 
+#  - Configure
 yordam_title = 'YordamBT s.19.2 - Sakarya Uygulamalı Bilimler Üniversitesi - KTP338'
 
 demirbasNoGir = "Lütfen Demirbaş Seri No Girdikten sonra işleme devam etmek için entera, , çıkış için ESC'ye basınız."
@@ -15,7 +16,7 @@ odunc_demirbasNoGiriniz = "Lütfen Demirbaş Seri No Girdikten sonra ödünç i�
 
 odunc_success= "Ödünç verme işlemi başarılı"
 
-# Opening Modules
+# Opening Modules  - Configure
 
 file_maker_exe_path = r"C:\Program Files\FileMaker\FileMaker Pro 19\FileMaker Pro.exe"
 
@@ -35,3 +36,7 @@ iadeAl_demirbasNoGir2 = "Lütfen Demirbaş Seri No Giriniz."
 
 # General
 dugme_bulunamadi = "Düğme bulunamadı."
+
+# Yordam Kullanıcı Bilgileri - Configure
+yordam_kullanici_adi ="akyazimyo"
+yordam_sifre = "akyazimyo"

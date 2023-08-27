@@ -4,7 +4,6 @@ from Helpers.inputbox import userInput
 import pyautogui
 from time import sleep
 from Helpers.handleOduncUyari import handleUyariOdunc
-import Data.Strings as strings
 import Data.Speechs as speechs
 import Data.ImageFilaPaths as images
 from Managers.ImageManager import ImageManager

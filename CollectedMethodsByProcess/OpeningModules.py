@@ -1,11 +1,11 @@
 from pywinauto.application import Application
-import pyautogui
 import time
 import pygetwindow
 import pythoncom
 import Data.Strings as strings
 import Data.ImageFilaPaths as images
 from Managers.ImageManager import ImageManager
+import Data.Strings as strings
 
 
 
@@ -37,7 +37,7 @@ def LoginYordamBT():
     passInput = app.FileMakerPro.child_window(
         auto_id="passwordBox", control_type="Edit"
     ).wrapper_object()
-    passInput.type_keys("akyazimyo")
+    passInput.type_keys(strings.yordam_sifre)
     time.sleep(0.5)
     signInButton = app.FileMakerPro.child_window(
         title="Sign in", auto_id="IDSIGNIN", control_type="Button"
