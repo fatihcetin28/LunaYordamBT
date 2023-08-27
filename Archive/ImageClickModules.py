@@ -1,5 +1,5 @@
 import pyautogui
-import JAWSFSAPI as JF
+import Helpers.JAWSFSAPI as JF
 
 def ClickImage(img_filepath, img_description):
     imgLocation = pyautogui.locateCenterOnScreen(img_filepath, confidence=0.9)

@@ -1,7 +1,7 @@
 import time
 # from reallyspeak import speak
-import OpeningModules as OM
-import JAWSFSAPI as JF
+import CollectedMethodsByProcess.OpeningModules as OM
+import Helpers.JAWSFSAPI as JF
 
 JF.StopSpeech()
 time.sleep(3)

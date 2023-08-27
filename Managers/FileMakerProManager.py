@@ -1,4 +1,4 @@
-from ApplicationManager import ApplicationManager as AM
+from Managers.ApplicationManager import ApplicationManager as AM
 from time import sleep
 
 file_path = r"C:\Program Files\FileMaker\FileMaker Pro 19\FileMaker Pro.exe"

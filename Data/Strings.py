@@ -20,3 +20,18 @@ odunc_success= "Ödünç verme işlemi başarılı"
 file_maker_exe_path = r"C:\Program Files\FileMaker\FileMaker Pro 19\FileMaker Pro.exe"
 
 file_maker_title = "FileMaker Pro"
+
+# FilePaths
+
+uyariBaslikImage = r'C:\Users\SUBU\Documents\Codebas\YordamYardimBT\uyariImages\uyariBaslik.png'
+
+uyariSaveFilePath = r"C:\Users\SUBU\Documents\Codebas\YordamYardimBT\uyari.png"
+
+
+# İade Al Modules
+
+iadeAL_demirbasNoGiriniz = "Lütfen Demirbaş Seri No Girdikten sonra iade alma işlemi için entera, çıkış için ESC'ye basınız."
+iadeAl_demirbasNoGir2 = "Lütfen Demirbaş Seri No Giriniz."
+
+# General
+dugme_bulunamadi = "Düğme bulunamadı."

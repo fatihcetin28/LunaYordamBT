@@ -1,4 +1,4 @@
-from WindowManager import Window
+from Managers.WindowManager import Window
 
 w = Window("Defteri")
 

@@ -1,6 +1,6 @@
 
 # handle_odunc_uyari modülü
-uyari = "Program uyarı verdi."
+uyariVerdi = "Program uyarı verdi."
 
 uyari_islemden_cikis = "Uyarı verildi ödünç verme işleminden çıkılıyor."
 
@@ -20,6 +20,7 @@ odunc_tc_no_giriniz2 = "Lütfen TC Kimlik No Giriniz."
 
 odunc_demirbasNoGiriniz = "Lütfen Demirbaş Seri No Girdikten sonra ödünç işlemi için entera, çıkış için ESC'ye basınız."
 
+odunc_demirbasNoGiriniz2 = "Lütfen demirbaş no giriniz."
 odunc_success= "Ödünç verme işlemi başarılı"
 
 # Open Yordam BT
@@ -27,5 +28,7 @@ odunc_success= "Ödünç verme işlemi başarılı"
 yordam_bt_acilis = "Yordam BT Açılıyor"
 
 yordam_bt_acildi = "Yordam BT Açıldı."
+
+
 
 
