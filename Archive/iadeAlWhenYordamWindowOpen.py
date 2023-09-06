@@ -1,9 +1,9 @@
-from pygetwindowMaximize import maximize_window
-from pygetwindowMaximize import minimize_window
+from Helpers.window_max_min import maximize_window
+from Helpers.window_max_min import minimize_window
 import pyautogui, time
-from reallyspeak import speak
-from inputbox import userInput
-from handleOduncUyari import handleUyariOdunc
+from Archive.reallyspeak import speak
+from Helpers.inputbox import userInput
+from Helpers.handleOduncUyari import handleUyariOdunc
 
 demirbasNo = userInput("Lütfen Demirbaş Seri No Girdikten sonra ödünç işlemi için entera, çıkış için ESC'ye basınız.","Lütfen Demirbaş Seri No Giriniz." )
 

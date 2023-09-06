@@ -1,7 +1,7 @@
-import JAWSFSAPI as JF
+import Helpers.JAWSFSAPI as JF
 from time import sleep
-import IadeAlModules as IM
-import YordamWindowModules as YWM
+import CollectedMethodsByProcess.IadeAlModules as IM
+import Helpers.YordamWindowHelper as YWM
 
 JF.StopSpeech()
 
