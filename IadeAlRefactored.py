@@ -31,5 +31,7 @@ sleep(1)
 
 YWM.minimize_window()
 
+sleep(1)
+
 JF.StartSpeech()
 

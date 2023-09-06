@@ -1,5 +1,5 @@
 import win32com.client
-import pythoncom
+
 
 # Create the COM object
 # Call the SayString method
@@ -31,3 +31,4 @@ def Speak(text):
 #     print(item)
 # o.Disable()
 # o.Enable(True)
+
