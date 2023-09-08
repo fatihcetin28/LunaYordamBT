@@ -8,17 +8,21 @@ class ImageManager:
         self.description = description
 
     def locate_center(self):
-       return pyautogui.locateCenterOnScreen(self.file_path, confidence=0.9)
+       return pyautogui.locateCenterOnScreen(self.file_path, confidence=0.8)
         # locate the center of image
 
     def locate_topleft(self):
-        return pyautogui.locateOnScreen(self.file_path, confidence=0.9)
+        return pyautogui.locateOnScreen(self.file_path, confidence=0.8)
         #  locate the position of image
 
     def click(self):
+        resimloc = self.is_image_exist_on_window()
         if self.is_image_exist_on_window():
-            pyautogui.click(self.file_path)
+            print(self.file_path)
+            pyautogui.click(resimloc)
             JF.Speak(f"{self.description} düğmesi tıklandı.")
+            print(f"{self.description} düğmesi tıklandı.")
+            print(self.file_path)
             return True
         else:
             print("Düğme bulunamadı.")
@@ -33,7 +37,10 @@ class ImageManager:
         pass
 
     def is_image_exist_on_window(self):
-        if self.locate_center() is not None:
-            return True
+        location = self.locate_center()
+        if location is not None:
+            print(f'{self.description} - {self.file_path} bulundu')
+            return location
         else:
+            print(f'{self.description} - {self.file_path} bulunmadı')
             return False

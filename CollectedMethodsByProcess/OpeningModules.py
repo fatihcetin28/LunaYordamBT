@@ -5,7 +5,7 @@ import pythoncom
 import Data.Strings as strings
 import Data.ImageFilaPaths as images
 from Managers.ImageManager import ImageManager
-import Data.Strings as strings
+
 
 
 
@@ -47,11 +47,13 @@ def LoginYordamBT():
 
 def ClickUyeOduncIslemleriImage():
     imgMan = ImageManager(images.uye_odunc_islemleri_button, "Üye Ödunc İşlemleri")
-    return imgMan.click()
+    imgMan.click()
 
 def ClickOduncIslemleriImage():
-    imgMan = ImageManager(images.odunc_islemleri, "Odünç İşlemleri")
-    return imgMan.click
+    imgMan2 = ImageManager(images.odunc_islemleri, "Odünç İşlemleri")
+    print(images.odunc_islemleri)
+    print(f'{imgMan2.file_path} : imgMan2 file path')
+    imgMan2.click()
 
 def YordamIslemPencereAc():
     ClickUyeOduncIslemleriImage()

@@ -20,6 +20,7 @@ def ClickIadeAlButton():
     return imgMan.click()
 
 def DemirbasNoYaz(demirbasNo):
+    JF.Speak("Demirbaş no yazılıyor.")
     pyautogui.typewrite(str(demirbasNo)) #demirbaş no
     pyautogui.press('enter')
     sleep(1)

@@ -1,4 +1,3 @@
-from pywinauto.application import Application
 from Managers.ApplicationManager import ApplicationManager
 from Data.Strings import yordam_title
 

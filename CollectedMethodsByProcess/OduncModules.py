@@ -16,7 +16,7 @@ def TCNoAl():
 
 def DemirbasNoAl():
     JF.Speak(speechs.odunc_demirbasNoGiriniz)
-    demirbasNo = userInput(speechs.odunc_demirbasNoGiriniz,speechs.odunc_demirbasNoGiriniz2 )
+    demirbasNo = userInput(speechs.odunc_demirbasNoGiriniz,speechs.odunc_demirbasNoGiriniz2)
     return demirbasNo
 
 def OduncVerImageClick():
@@ -25,12 +25,14 @@ def OduncVerImageClick():
     return imgMan.click()
 
 def TcNoYaz(tcNo):
+    JF.Speak("TC No yazılıyor.")
     pyautogui.typewrite(str(tcNo)) #tc no giriyoruz
     pyautogui.press('enter')
     sleep(1)
     handleUyariOdunc()
 
 def DemirbasNoYaz(demirbasNo):
+    JF.Speak("Demirbaş No Yazılıyor.")
     pyautogui.typewrite(str(demirbasNo)) #demirbaş no
     pyautogui.press('enter')
     sleep(1)
