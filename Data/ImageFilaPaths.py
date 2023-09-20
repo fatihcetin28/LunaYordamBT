@@ -9,7 +9,6 @@ module_parent_directory = os.path.dirname(module_file_path)
 # Get the parent directory of the module's parent directory
 parent_of_module_parent = os.path.dirname(module_parent_directory)
 
-
 print(os.path.join(parent_of_module_parent,"ButtonImages"))
 
 button_images_path = os.path.join(parent_of_module_parent,"ButtonImages")
@@ -28,4 +27,3 @@ odunc_ver_button = os.path.join(button_images_path,"oduncverbutton.png" )
 uye_odunc_islemleri_button = os.path.join(button_images_path,"uyeoduncislemleri.png")
 
 odunc_islemleri = os.path.join(button_images_path,"odunc.png" )
-
