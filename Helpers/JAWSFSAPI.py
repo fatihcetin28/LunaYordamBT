@@ -21,7 +21,7 @@ def Speak(text):
     o = win32com.client.Dispatch("freedomsci.jawsapi")
     o.SayString(text)
 
-# StartSpeech()
+StartSpeech()
 # a=StopSpeech()
 # print(a)
 

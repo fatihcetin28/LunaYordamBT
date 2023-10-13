@@ -1,4 +1,5 @@
 from Helpers.JAWSFSAPI import Speak
+from  Helpers.JAWSFSAPI import StartSpeech
 import pyautogui
 import time
 from Helpers.imageToText import toText
@@ -43,6 +44,8 @@ def handleUyariOdunc():
         minimize_window(window_title)
 
         remove(Strings.uyariSaveFilePath)
+
+        StartSpeech()
 
         exit()
     else:
