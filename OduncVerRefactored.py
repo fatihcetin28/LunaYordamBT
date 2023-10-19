@@ -7,6 +7,13 @@ JF.StopSpeech()
 
 sleep(3)
 
+if not YWM.IsYordamWindowOpen():
+    JF.Speak("Yordam Açık Değil, lütfen önce yordamı aç modülünü kullanarak Yordamı açınız")
+    sleep(2)
+    JF.StartSpeech()
+    sleep(1)
+    exit()
+
 tcNo= OM.TCNoAl()
 
 sleep(1)

@@ -15,4 +15,4 @@ class ApplicationManager:
     )
 
     def close(self):
-        self.connect_app_with_title().kill()
+        self.connect_app_with_title_and_return_app().kill()

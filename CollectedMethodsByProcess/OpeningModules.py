@@ -5,6 +5,7 @@ import pythoncom
 import Data.Strings as strings
 import Data.ImageFilaPaths as images
 from Managers.ImageManager import ImageManager
+from Managers.YordamManager import CheckIfYordamOpen
 
 
 
@@ -76,3 +77,6 @@ def MinimizeActiveWindow():
 def MaxMinActiveWindow():
     MaximizeActiveWindow()
     MinimizeActiveWindow()
+
+def CheckIFYordamOpenAtOpening():
+    return CheckIfYordamOpen()

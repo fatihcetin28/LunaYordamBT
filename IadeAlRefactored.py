@@ -7,6 +7,13 @@ JF.StopSpeech()
 
 sleep(3)
 
+if not YWM.IsYordamWindowOpen():
+    JF.Speak("Yordam Açık Değil, lütfen önce yordamı aç modülünü kullanarak Yordamı açınız")
+    sleep(2)
+    JF.StartSpeech()
+    sleep(1)
+    exit()
+
 demirbasNo=IM.DemirbasNoAl()
 
 sleep(1)
@@ -25,11 +32,13 @@ sleep(1)
 
 IM.IadeSuccess()
 
+sleep(1)
+
 IM.ClickVazgecButton()
 
 sleep(1)
 
-YWM.minimize_window()
+YWM.MinimizeYordamWindow()
 
 sleep(1)
 
