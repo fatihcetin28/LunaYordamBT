@@ -22,7 +22,6 @@ def ClickYordamBTAfterFileMakerStarted():
     ).wrapper_object()
     yordamBT.double_click_input()
 
-
 def LoginYordamBT():
     app = ConnectFileMakerAndReturnApp()
     passInput = app.FileMakerPro.child_window(
