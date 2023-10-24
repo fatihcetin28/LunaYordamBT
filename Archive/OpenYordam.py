@@ -1,8 +1,8 @@
 from pywinauto.application import Application
 import time
 import pygetwindow
-from uyeoduncislemacma import uyeoduncpencereac
-from reallyspeak import speak
+from Archive.uyeoduncislemacma import uyeoduncpencereac
+from Archive.reallyspeak import speak
 
 
 def StartYordam():

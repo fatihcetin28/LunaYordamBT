@@ -1,34 +1,48 @@
 import time
-from reallyspeak import speak
-import OpeningModules as OM
-import Jaws
+import CollectedMethodsByProcess.OpeningModules as OM
+import Helpers.JAWSFSAPI as JF
 
-Jaws.StopSpeaking()
 
-speak("Yordam BT Açılıyor.")
+JF.StopSpeech()
+time.sleep(3)
+
+if OM.CheckIfYordamOpen():
+    JF.Speak("Yordam BT Zaten Açık. Lütfen Ödünç ver veya İade Al işlemlerinden birini yapınız")
+    time.sleep(1)
+    JF.StartSpeech()
+    time.sleep(1)
+    exit()
+
+JF.Speak("Yordam BT Açılıyor")
 
 time.sleep(0.5)
 
 OM.StartFileMaker()
 
-time.sleep(1.5)
+time.sleep(2) 
 
 OM.ClickYordamBTAfterFileMakerStarted()
 
-time.sleep(1.5)
+time.sleep(1)
+
+JF.Speak("Yordam BT kullanıcı girişi yapılıyor.")
 
 OM.LoginYordamBT()
 
-time.sleep(0.5)
+time.sleep(5)
 
-OM.YordamIslemPencereAc()
+# OM.YordamIslemPencereAc()
 
-time.sleep(0.5)
+OM.ClickUyeOduncIslemleriImage()
+time.sleep(2)
+OM.ClickOduncIslemleriImage()
+
+time.sleep(1)
 
 OM.MaxMinActiveWindow()
 
 time.sleep(0.5)
 
-speak("Yordam BT Açıldı.")
+JF.Speak("Yordam BT Açıldı.")
 
-Jaws.StartSpeaking()
+JF.StartSpeech()
