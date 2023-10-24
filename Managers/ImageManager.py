@@ -1,6 +1,8 @@
 import pyautogui
 import Helpers.JAWSFSAPI as JF
 from Helpers.imageToText import toText
+from time import sleep
+
 
 class ImageManager:
     def __init__(self, file_path="", description=""):
@@ -8,7 +10,21 @@ class ImageManager:
         self.description = description
 
     def locate_center(self):
-       return pyautogui.locateCenterOnScreen(self.file_path, confidence=0.8)
+        resimVar = False
+        resimSayac = 0
+        while not resimVar and resimSayac < 5:
+            try:
+                resimLoc = pyautogui.locateCenterOnScreen(
+                    self.file_path, confidence=0.8
+                )
+                resimVar = True
+                JF.Speak("Düğme bulundu")
+            except:
+                JF.Speak("Düğme ekranda bulunamadı, tekrar aranacak")
+                resimSayac = resimSayac + 1
+                sleep(5)
+        return resimLoc
+
         # locate the center of image
 
     def locate_topleft(self):
@@ -26,9 +42,11 @@ class ImageManager:
             return True
         else:
             print("Düğme bulunamadı.")
-            JF.Speak(f"{self.description} düğmesi ekranda bulunamadı. Çıkış yapılıyor. Lütfen Tekrar deneyiniz.")
+            JF.Speak(
+                f"{self.description} düğmesi ekranda bulunamadı. Çıkış yapılıyor. Lütfen Tekrar deneyiniz."
+            )
             return False
-    
+
     def to_text(self):
         return toText(self.file_path)
 
@@ -39,8 +57,8 @@ class ImageManager:
     def is_image_exist_on_window(self):
         location = self.locate_center()
         if location is not None:
-            print(f'{self.description} - {self.file_path} bulundu')
+            print(f"{self.description} - {self.file_path} bulundu")
             return location
         else:
-            print(f'{self.description} - {self.file_path} bulunmadı')
+            print(f"{self.description} - {self.file_path} bulunmadı")
             return False
