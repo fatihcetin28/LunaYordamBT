@@ -34,7 +34,7 @@ time.sleep(5)
 # OM.YordamIslemPencereAc()
 
 OM.ClickUyeOduncIslemleriImage()
-time.sleep(2)
+time.sleep(3)
 OM.ClickOduncIslemleriImage()
 
 time.sleep(1)

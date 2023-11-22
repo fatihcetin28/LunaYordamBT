@@ -12,7 +12,7 @@ class ImageManager:
     def locate_center(self):
         resimVar = False
         resimSayac = 0
-        while not resimVar and resimSayac < 5:
+        while resimVar == False and resimSayac < 5:
             try:
                 resimLoc = pyautogui.locateCenterOnScreen(
                     self.file_path, confidence=0.8
