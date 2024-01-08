@@ -3,6 +3,9 @@ from time import sleep
 import CollectedMethodsByProcess.IadeAlModules as IM
 import Helpers.YordamWindowHelper as YWM
 import Helpers.handleScreenshot as SS
+from datetime import datetime
+import Helpers.toExcel as EX
+
 
 JF.StopSpeech()
 
@@ -18,6 +21,16 @@ if not YWM.IsYordamWindowOpen():
     exit()
 
 demirbasNo = IM.DemirbasNoAl()
+
+sleep(1)
+
+data = {
+    "Demirbas No": [demirbasNo],
+    "Tarih": [datetime.now().date().strftime("%d-%m-%Y")],
+    "Saat": [datetime.now().time().strftime("%H:%M:%S")],
+}
+
+EX.toIadeXls(data=data)
 
 sleep(1)
 

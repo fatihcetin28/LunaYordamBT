@@ -4,6 +4,8 @@ import Helpers.handleOduncUyari as handle
 from time import sleep
 import Helpers.YordamWindowHelper as YWM
 import Helpers.handleScreenshot as SS
+from datetime import datetime
+import Helpers.toExcel as EX
 
 JF.StopSpeech()
 
@@ -23,6 +25,17 @@ tcNo = OM.TCNoAl()
 sleep(1)
 
 demirbasNo = OM.DemirbasNoAl()
+
+sleep(1)
+
+data = {
+    "TCNo": [tcNo],
+    "Demirbas No": [demirbasNo],
+    "Tarih": [datetime.now().date().strftime("%d-%m-%Y")],
+    "Saat": [datetime.now().time().strftime("%H:%M:%S")],
+}
+
+EX.toOduncXls(data=data)
 
 sleep(1)
 
