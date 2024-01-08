@@ -1,5 +1,6 @@
 import CollectedMethodsByProcess.OduncModules as OM
 import Helpers.JAWSFSAPI as JF
+import Helpers.handleOduncUyari as handle
 from time import sleep
 import Helpers.YordamWindowHelper as YWM
 import Helpers.handleScreenshot as SS
@@ -36,6 +37,10 @@ OM.OduncVerImageClick()
 SS.takeSS()
 
 sleep(1)
+
+handle.handleUyariOdunc()
+
+sleep(4)
 
 OM.TcNoYaz(tcNo)
 SS.takeSS()
