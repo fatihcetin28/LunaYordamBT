@@ -1,7 +1,11 @@
 import time
 import CollectedMethodsByProcess.OpeningModules as OM
 import Helpers.JAWSFSAPI as JF
+from loggers import openYordamLogger
 
+logger = openYordamLogger()
+
+logger.debug('Yordam Açma Denemesi')
 
 JF.StopSpeech()
 time.sleep(3)
@@ -11,6 +15,7 @@ if OM.CheckIfYordamOpen():
     time.sleep(1)
     JF.StartSpeech()
     time.sleep(1)
+    logger.debug('Yordam zaten acikmis.')
     exit()
 
 JF.Speak("Yordam BT Açılıyor")
