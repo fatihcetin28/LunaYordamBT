@@ -13,14 +13,10 @@ class ImageManager:
         resimVar = False
         resimSayac = 0
         while resimVar == False and resimSayac < 5:
-            try:
-                resimLoc = pyautogui.locateCenterOnScreen(
-                    self.file_path, confidence=0.8
-                )
-                if not resimLoc is None:
-                    resimVar = True
+            resimLoc = pyautogui.locateCenterOnScreen(self.file_path, confidence=0.8)
+            if resimLoc is not None:
+                resimVar = True
                 JF.Speak("Düğme bulundu")
-                sleep(1)
             except:
                 JF.Speak("Düğme ekranda bulunamadı, tekrar aranacak")
                 resimSayac = resimSayac + 1
