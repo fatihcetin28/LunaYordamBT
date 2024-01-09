@@ -35,11 +35,12 @@ EX.toIadeXls(data=data)
 sleep(1)
 
 SS.takeSS()
-
+sleep(1)
 YWM.MaximizeYordamWindow()
 
 sleep(1)
 SS.takeSS()
+sleep(1)
 IM.ClickIadeAlButton()
 SS.takeSS()
 sleep(1)
