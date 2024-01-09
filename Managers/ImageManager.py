@@ -17,7 +17,7 @@ class ImageManager:
             if resimLoc is not None:
                 resimVar = True
                 JF.Speak("Düğme bulundu")
-            except:
+            else:
                 JF.Speak("Düğme ekranda bulunamadı, tekrar aranacak")
                 resimSayac = resimSayac + 1
                 sleep(5)
