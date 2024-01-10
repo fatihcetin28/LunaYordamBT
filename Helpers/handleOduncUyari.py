@@ -8,7 +8,7 @@ from os import remove
 import Data.Strings as Strings
 import Data.Speechs as Speechs
 import Helpers.handleScreenshot as SS
-from loggers import UyariLogger
+from Helpers.loggers import UyariLogger
 
 logger = UyariLogger()
 
