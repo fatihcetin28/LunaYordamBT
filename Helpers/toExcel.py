@@ -30,15 +30,15 @@ def toIadeXls(data):
 
 # # Your variables
 # tcNo = 47341014396
-demirbasNo = "01050652"
+# demirbasNo = "01050652"
 
-# # Create a dictionary with your variables
-data = {
+# # # Create a dictionary with your variables
+# data = {
 
-    "Demirbas No": [demirbasNo],
-    "Tarih": [datetime.now().date().strftime("%d-%m-%Y")],
-    "Saat": [datetime.now().time().strftime("%H:%M:%S")],
-}
+#     "Demirbas No": [demirbasNo],
+#     "Tarih": [datetime.now().date().strftime("%d-%m-%Y")],
+#     "Saat": [datetime.now().time().strftime("%H:%M:%S")],
+# }
 
 # toOduncXls(data=data)
-toIadeXls(data=data)
+# toIadeXls(data=data)

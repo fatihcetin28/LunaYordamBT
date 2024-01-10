@@ -10,9 +10,6 @@ grandparent_directory = os.path.abspath(os.path.join(parent_directory, ".."))
 SSFolder = os.path.join(grandparent_directory, folder)
 
 
-print("girdi")
-
-
 def takeSS():
     # Get the current time
     current_time = datetime.now().time()
