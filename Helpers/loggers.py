@@ -47,3 +47,15 @@ def UyariLogger():
     file_handler.setFormatter(formatter)
     logga.addHandler(file_handler)
     return logga
+
+
+def ImageClickLogger():
+    logga = logging.getLogger("ImageClickLogger")
+    logga.setLevel(logging.DEBUG)
+    formatter = logging.Formatter(
+        "%(levelname)s-%(asctime)s-%(message)s", datefmt="%d/%m/%Y-%H:%M:%S"
+    )
+    file_handler = logging.FileHandler("ImageClickLogs.log")
+    file_handler.setFormatter(formatter)
+    logga.addHandler(file_handler)
+    return logga

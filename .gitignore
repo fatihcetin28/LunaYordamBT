@@ -9,7 +9,11 @@ Screenshots/090124-104542.png
 Screenshots/
 *.xlsx
 opening.log
+<<<<<<< HEAD
 uyari-100124-135233.png
 uyari-100124-135647.png
 OduncLogs.xlsx
 
+=======
+*.png
+>>>>>>> 6c5cc1975a79d1b4497c59ebe2d0076541d32afc

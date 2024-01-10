@@ -2,6 +2,9 @@ import pyautogui
 import Helpers.JAWSFSAPI as JF
 from Helpers.imageToText import toText
 from time import sleep
+from Helpers.loggers import ImageClickLogger
+
+logger = ImageClickLogger()
 
 
 class ImageManager:
@@ -16,9 +19,18 @@ class ImageManager:
             resimLoc = pyautogui.locateCenterOnScreen(self.file_path, confidence=0.8)
             if resimLoc is not None:
                 resimVar = True
-                JF.Speak("Düğme bulundu")
+                JF.Speak(f"{self.description} düğmesi {resimSayac+1}. denemede bulundu")
+                sleep(1)
+                logger.debug(
+                    f"{self.description} düğmesi {resimSayac+1}. denemede bulundu"
+                )
             else:
-                JF.Speak("Düğme ekranda bulunamadı, tekrar aranacak")
+                JF.Speak(
+                    f"{self.description} düğmesi {resimSayac+1}. denemede ekranda bulunamadı, tekrar aranacak"
+                )
+                logger.debug(
+                    f"{self.description} düğmesi {resimSayac+1}. denemede ekranda bulunamadı, tekrar aranacak"
+                )
                 resimSayac = resimSayac + 1
                 sleep(5)
         return resimLoc
@@ -32,14 +44,13 @@ class ImageManager:
     def click(self):
         resimloc = self.is_image_exist_on_window()
         if self.is_image_exist_on_window():
-            print(self.file_path)
             pyautogui.click(resimloc)
             JF.Speak(f"{self.description} düğmesi tıklandı.")
-            print(f"{self.description} düğmesi tıklandı.")
-            print(self.file_path)
+            logger.debug(f"{self.description} düğmesi tıklandı.")
+            logger.debug(self.file_path)
             return True
         else:
-            print("Düğme bulunamadı.")
+            logger.debug(f"{self.description} düğmesi bulunamadı.")
             JF.Speak(
                 f"{self.description} düğmesi ekranda bulunamadı. Çıkış yapılıyor. Lütfen Tekrar deneyiniz."
             )
@@ -55,8 +66,8 @@ class ImageManager:
     def is_image_exist_on_window(self):
         location = self.locate_center()
         if location is not None:
-            print(f"{self.description} - {self.file_path} bulundu")
+            logger.debug(f"{self.description} - {self.file_path} bulundu")
             return location
         else:
-            print(f"{self.description} - {self.file_path} bulunmadı")
+            logger.debug(f"{self.description} - {self.file_path} bulunmadı")
             return False
