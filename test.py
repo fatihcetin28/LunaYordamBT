@@ -12,9 +12,13 @@
 
 # print(a)
 
-import Helpers.handleScreenshot as SS
-from time import sleep
+# import Helpers.handleScreenshot as SS
+# from time import sleep
 
-SS.takeSS()
-sleep(2)
-SS.takeSS()
+# SS.takeSS()
+# sleep(2)
+# SS.takeSS()
+from Helpers.loggers import openYordamLogger
+
+l = openYordamLogger()
+l.debug("deneme22")
