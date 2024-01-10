@@ -8,25 +8,36 @@ from os import remove
 import Data.Strings as Strings
 import Data.Speechs as Speechs
 import Helpers.handleScreenshot as SS
+from loggers import UyariLogger
+
+logger = UyariLogger()
 
 
 def handleUyariOdunc():
     window_title = Strings.yordam_title
 
+    logger.debug(window_title)
     uyariVarMi = pyautogui.locateCenterOnScreen(
         Strings.uyariBaslikImage, confidence=0.9
     )
 
+    logger.debug(uyariVarMi)
+
     if uyariVarMi is not None:
         SS.takeSS()
 
+        logger.debug("uyari alindi")
+
+        uyariPath = Strings.uyariSaveFilePath
+
         Speak(Speechs.uyariVerdi)
         im = pyautogui.screenshot(region=(500, 320, 345, 175))
-        im.save(Strings.uyariSaveFilePath)
+        im.save(uyariPath)
 
         time.sleep(0.5)
 
-        text = toText(Strings.uyariSaveFilePath)
+        text = toText(uyariPath)
+        logger.debug(f"uyari-{text}")
 
         time.sleep(0.5)
 
@@ -46,7 +57,7 @@ def handleUyariOdunc():
 
         minimize_window(window_title)
 
-        remove(Strings.uyariSaveFilePath)
+        # remove(Strings.uyariPath)
 
         StartSpeech()
 
