@@ -35,7 +35,10 @@ data = {
     "Saat": [datetime.now().time().strftime("%H:%M:%S")],
 }
 
-EX.toIadeXls(data=data)
+try:
+    EX.toIadeXls(data=data)
+except Exception as e:
+    logger.debug(e)
 
 sleep(1)
 
@@ -53,8 +56,9 @@ logger.debug("Iade al dugmesi tiklandi")
 SS.takeSS()
 sleep(1)
 
-IM.DemirbasNoYaz(demirbasNo)
 logger.debug("demirbas no yazildi")
+IM.DemirbasNoYaz(demirbasNo)
+
 handleUyari()
 SS.takeSS()
 sleep(1)
@@ -65,7 +69,7 @@ logger.debug("iade basarili olmus olmali")
 sleep(1)
 SS.takeSS()
 IM.ClickVazgecButton()
-logger.debug("vzgec dugmesi tiklama denemesi")
+logger.debug("vazgec dugmesi tiklama denemesi")
 SS.takeSS()
 sleep(1)
 SS.takeSS()
